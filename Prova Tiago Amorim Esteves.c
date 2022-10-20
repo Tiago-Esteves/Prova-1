@@ -17,17 +17,36 @@ int main(){
 	switch(m){
 		case 1:
 		
-		printf("Digite o valor do cateto 1: ");
+		printf("Digite o valor do cat 1: ");
 		scanf("%f",&a);
-		printf("Digite o valor do cateto 2: ");
+		printf("Digite o valor do cat 2: ");
 		scanf("%f",&b);
 		prev=(a*a)+(b*b);
 		h = sqrt(prev);
 		s = a/h;
 		printf("Hipotenusa: %.3f",sqrt(prev));
 		printf("\nSeno: %.3f", s);
-		
-	
+		break;
+		case 2:
+			printf("Digite seu nome: ");
+			fflush(stdin);		
+			fgets(nome, 30, stdin);	
+			fflush(stdin);	
+			printf("Digite o ano de nascimento: ");
+			scanf("%d", &ano);
+			d = ano%100;
+			
+			if(ano%4==0 && d!=0){
+			printf("%s, %d e um ano bissexto", nome, ano);
+				
+			}
+			else if(ano%4==0 && d==0 && ano%400==0){
+				printf("%s, %d e um ano bissexto", nome, ano);
+				
+			} else{
+				printf("%s, %d nao e um ano bissexto", nome, ano);
+			}
+			break;
 			
 			
 		
